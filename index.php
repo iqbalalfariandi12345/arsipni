@@ -6,7 +6,6 @@ if (!isset($_SESSION["login"])) {
 	exit;
 }
 
-
 // pagination
 // konfigurasi
 $jumlah_data_per_halaman = 10;
