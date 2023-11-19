@@ -1,0 +1,173 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Nov 19, 2023 at 02:30 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `arsip`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `arsip_dokumen`
+--
+
+CREATE TABLE `arsip_dokumen` (
+  `id_arsip_dokumen` int(11) NOT NULL,
+  `judul_buku` varchar(255) NOT NULL,
+  `id_kategori` int(11) NOT NULL,
+  `tahun` int(4) NOT NULL,
+  `keterangan` varchar(255) NOT NULL,
+  `filename` varchar(200) NOT NULL,
+  `filesize` int(11) NOT NULL,
+  `filetype` varchar(100) NOT NULL,
+  `upload_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `arsip_dokumen`
+--
+
+INSERT INTO `arsip_dokumen` (`id_arsip_dokumen`, `judul_buku`, `id_kategori`, `tahun`, `keterangan`, `filename`, `filesize`, `filetype`, `upload_date`) VALUES
+(116, 'ADDENDUM', 3, 2008, 'kawndkwad', 'ADDENDUM TANGGAL 12 MARET 2009 KONTRAK (01 UM-RTN XI-207 2007) PENGEMBANGAN JARINGAN TRANSMISI PDAM KOTA PONTIANAK DILOKASI RUAS IMAM BONJOL - BOOSTER RAMBUTAN DAN RUAS ALIANYANG - SUWIGNYO.pdf', 6927453, 'application/pdf', '2023-11-13 15:28:47'),
+(117, 'BERITA ACARA PEMERIKSAAN DAN PENERIMAAN BARANG', 5, 2018, 'gaga', 'BERITA ACARA PEMERIKSAAN DAN PENERIMAAN BARANG (01 UTR-PDAM VIII 2018) 27 AGUSTUS 2018.pdf', 1078150, 'application/pdf', '2023-11-14 12:23:54'),
+(118, 'BPKP', 3, 2015, '', 'bpkp LAPORAN EVALUASI KINERJA PERUSAHAAN DAERAH AIR MINUM (PDAM) TIRTA KHATULISTIWA KOTA PONTIANAK TAHUN BUKU 2014 (LEV-249 PW14 4 2015) Tgl 30 Juni 2015().pdf', 19002351, 'application/pdf', '2023-11-14 01:00:09'),
+(119, 'BPKP', 1, 2015, 'Tahun : 2023', 'bpkp LAPORAN EVALUASI KINERJA PERUSAHAAN DAERAH AIR MINUM (PDAM) TIRTA KHATULISTIWA KOTA PONTIANAK TAHUN BUKU 2014 (LEV-249 PW14 4 2015) Tgl 30 Juni 2015.pdf', 19590002, 'application/pdf', '2023-11-15 01:02:23'),
+(121, 'BPKP', 1, 2017, 'HSBH', 'bpkp LAPORAN EVALUASI KINERJA PERUSAHAAN DAERAH AIR MINUM (PDAM) TIRTA KHATULISTIWA KOTA PONTIANAK TAHUN BUKU 2016 (LEV-223 PW14 4 2017) Tgl 15 Juni 2017 (2).pdf', 18239776, 'application/pdf', '2023-11-15 00:56:27'),
+(122, 'BPKP', 1, 2017, '', 'bpkp LAPORAN EVALUASI KINERJA PERUSAHAAN DAERAH AIR MINUM (PDAM) TIRTA KHATULISTIWA KOTA PONTIANAK TAHUN BUKU 2016 (LEV-223 PW14 4 2017) Tgl 15 Juni 2017.pdf', 17215952, 'application/pdf', '0000-00-00 00:00:00'),
+(123, 'BPKP', 1, 2013, '', 'bpkp LAPORAN HASIL AUDIT KINERJA PERUSAHAAN DAERAH AIR MINUM (PDAM) TIRTA KHATULISTIWA KOTA PONTIANAK TAHUN BUKU 2012 (LHAK-491 PW14 4 2013) Tgl 3 Des 2013.pdf', 15918141, 'application/pdf', '0000-00-00 00:00:00'),
+(124, 'BPKP', 1, 2014, '', 'bpkp LAPORAN HASIL AUDIT KINERJA PERUSAHAAN DAERAH AIR MINUM (PDAM) TIRTA KHATULISTIWA KOTA PONTIANAK TAHUN BUKU 2013 (LHAK - 475 PW14 4 2014) Tgl 3 Oktober 2014.pdf', 19368577, 'application/pdf', '0000-00-00 00:00:00'),
+(125, 'COMPANY PROFIL PDAM PONTIANAK', 1, 2018, '', 'COMPANY PROFIL TAHUN 2018 PDAM TIRTA KHATULISTIWA PONTIANAK.pdf', 18732248, 'application/pdf', '0000-00-00 00:00:00'),
+(126, 'DATA POMPA BOOSTER', 1, 2015, '', 'DATA POMPA BOOSTER PDAM TIRTA KHATULISTIWA KOTA PONTIANAK 2015.pdf', 11940467, 'application/pdf', '0000-00-00 00:00:00'),
+(127, 'DATA POMPA INTAKE', 1, 2015, '', 'DATA POMPA INTAKE PDAM TIRTA KHATULISTIWA KOTA PONTIANAK 2015.pdf', 5704945, 'application/pdf', '0000-00-00 00:00:00'),
+(129, 'AS BUILD DRAWING', 1, 2018, '', 'AS BUILD DRAWING Pengembangan Jaringan Pipa Distribusi Tertier Pontianak Timur (2018).pdf', 18761326, 'application/pdf', '0000-00-00 00:00:00'),
+(130, 'AS BUILD DRAWING', 1, 2010, '', 'AS BUILD DRAWING PONTIANAK PENUNJANG SARA AIR BERSIH KONTRAK(04 SPK PA PSAB DPDF&PPD D-PU.SDA TANGGAL 1 SEPTEMBER 2010) ADDENDUM(04.A ADD-I SPK PA PSAB DPDF&PPD D-PU.SDA 1 DESEMBER 2010).pdf', 8129883, 'application/pdf', '0000-00-00 00:00:00'),
+(131, 'BERITA ACARA PEMERIKSAAN DAN PENERIMAAN BARANG', 1, 2018, '', 'BERITA ACARA PEMERIKSAAN DAN PENERIMAAN BARANG (01 UTR-PDAM VIII 2018) 27 AGUSTUS 2018().pdf', 1096008, 'application/pdf', '0000-00-00 00:00:00'),
+(132, 'BERITA ACARA PEMERIKSAAN DAN PENERIMAAN BARANG', 1, 2018, '', 'BERITA ACARA PEMERIKSAAN DAN PENERIMAAN BARANG (01 UTR-PDAM VIII 2018) 27 AGUSTUS 2018.pdf', 1078150, 'application/pdf', '0000-00-00 00:00:00'),
+(133, 'BERITA ACARA SERAH TERIMA AIR BERSIH DAK', 1, 2011, '', 'BERITA ACARA SERAH TERIMA AIR BERSIH DANA ALOKASI KHUSUS (DAK) PENUNJANG SARANA AIR BERSIH (DPDF DAN PPD), DAN PENUNJANG SARANA AIR BERSIH (DPIPD) TAHUN ANGGARAN 2010 (PONTIANAK, 2011) (2).pdf', 22705914, 'application/pdf', '0000-00-00 00:00:00'),
+(134, 'BERITA ACARA SERAH TERIMA AIR BERSIH DAK', 1, 2011, '', 'BERITA ACARA SERAH TERIMA AIR BERSIH DANA ALOKASI KHUSUS (DAK) PENUNJANG SARANA AIR BERSIH(DPDF DAN PPD), DAN PENUNJANG SARANA AIR BERSIH(DPIPD) TAHUN ANGGARAN 2010 (PONTIANAK, 2011).pdf', 25033734, 'application/pdf', '0000-00-00 00:00:00'),
+(135, 'BERITA ACARA SERAH TERIMA KEGIATAN AIR BERSIH AIR BAKU APBD II', 1, 2009, '', 'BERITA ACARA SERAH TERIMA KEGIATAN AIR BERSIH AIR BAKU APBD II(PENDAMPING AIR BERSIH AIR BAKU) TAHUN ANGGARAN 2008 (PONTIANAK 7 JANUARI 2009).pdf', 9111752, 'application/pdf', '0000-00-00 00:00:00'),
+(136, 'BERITA ACARA SERAH TERIMA KEGIATAN AIR BERSIH AIR BAKU APBD II', 1, 2008, '', 'BERITA ACARA SERAH TERIMA KEGIATAN AIR BERSIH AIR BAKU APBD II(PENDAMPING AIR BERSIH ATAU AIR BAKU) TAHUN ANGGARAN 2007 (PONTIANAK, MARET 2008).pdf', 3741954, 'application/pdf', '0000-00-00 00:00:00'),
+(137, 'BERITA ACARA SERAH TERIMA KEGIATAN AIR BERSIH AIR BAKU APBD II', 1, 2009, '', 'BERITA ACARA SERAH TERIMA KEGIATAN AIR BERSIH DAN ALOKASI KHUSUS (DAK) TAHUN ANGGARAN 2008 (PONTIANAK 7 JANUARI 2009).pdf', 11243740, 'application/pdf', '0000-00-00 00:00:00'),
+(138, 'BERITA ACARA SERAH TERIMA KEGIATAN AIR BERSIH AIR BAKU APBD II', 1, 2009, 'asasdd', 'BERITA ACARA SERAH TERIMA KEGIATAN AIR BERSIH DANA ALOKASI KHUSUS (DAK) TAHUN ANGGARAN 2007 (PONTIANAK, MARET 2008).pdf', 9089608, 'application/pdf', '2023-11-13 14:38:59'),
+(144, 'EOE', 2, 2001, '', 'bpkp LAPORAN HASIL AUDIT KINERJA PERUSAHAAN DAERAH AIR MINUM (PDAM) TIRTA KHATULISTIWA KOTA PONTIANAK TAHUN BUKU 2013 (LHAK - 475 PW14 4 2014) Tgl 3 Oktober 2014.pdf', 19368577, 'application/pdf', '2023-11-13 14:21:38');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kategori`
+--
+
+CREATE TABLE `kategori` (
+  `id_kategori` int(11) NOT NULL,
+  `nama_kategori` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `kategori`
+--
+
+INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
+(1, 'SKU'),
+(2, 'PPU'),
+(3, 'ELV'),
+(5, 'RAB');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id_user` int(11) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(350) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `nip` varchar(20) NOT NULL,
+  `akses` enum('administrator','pegawai') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `username`, `password`, `nama`, `nip`, `akses`) VALUES
+(1, 'adminarsip', '$2y$10$7sXsRJsIzSNyNPADmEK7KeXWijuVaytZaBPtnu4oYrRdeZQBHwuaG', 'adminarsip', '-', 'administrator'),
+(2, 'edo', '$2y$10$fJdZqF.OaO6Pu1OfIEUYXOBdRIIAG1GeG6jzNUkBY/4hSgr9j4Fr6', 'edo', '112231122', 'pegawai'),
+(3, 'admin', '$2y$10$X0ashHiTgVBIJyvh90M3Re77UOdB/KfAuCdJQJKvPeUFX2Hbb1uWO', 'Admin Arsip', '1233', 'administrator');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `arsip_dokumen`
+--
+ALTER TABLE `arsip_dokumen`
+  ADD PRIMARY KEY (`id_arsip_dokumen`),
+  ADD KEY `id_kategori` (`id_kategori`);
+
+--
+-- Indexes for table `kategori`
+--
+ALTER TABLE `kategori`
+  ADD PRIMARY KEY (`id_kategori`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id_user`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `arsip_dokumen`
+--
+ALTER TABLE `arsip_dokumen`
+  MODIFY `id_arsip_dokumen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
+
+--
+-- AUTO_INCREMENT for table `kategori`
+--
+ALTER TABLE `kategori`
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `arsip_dokumen`
+--
+ALTER TABLE `arsip_dokumen`
+  ADD CONSTRAINT `arsip_dokumen_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
