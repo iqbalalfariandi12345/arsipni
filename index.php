@@ -5,7 +5,7 @@ if (!isset($_SESSION["login"])) {
 	header("Location: login.php");
 	exit;
 }
-
+men peler
 // pagination
 // konfigurasi
 $jumlah_data_per_halaman = 10;
