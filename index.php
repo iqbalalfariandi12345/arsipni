@@ -5,7 +5,7 @@ if (!isset($_SESSION["login"])) {
 	header("Location: login.php");
 	exit;
 }
-men peler
+
 // pagination
 // konfigurasi
 $jumlah_data_per_halaman = 10;
@@ -65,7 +65,7 @@ if (isset($_REQUEST['btn'])) {
 
 <body class="bg">
 	<?php include 'include/navbar.php'; ?>
-
+<h1>men peler</h1>
 	<section id="bidang" class="bidang">
 		<div class="container-fluid">
 			<div class="row marquee justify-content-center">
